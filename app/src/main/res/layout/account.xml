@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account"
+    android:orientation="vertical">
+
+    <!--title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:text="회원가입" />
+
+    <!--NAME-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="이름"/>
+
+        <EditText
+            android:id="@+id/NAME"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!--ID-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="아이디"/>
+
+        <EditText
+            android:id="@+id/ID"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="중복확인"/>
+
+    </LinearLayout>
+
+    <!--PW-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="비밀번호"/>
+        <!--box *-->
+        <EditText
+            android:id="@+id/PW"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <!--PWCHK-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="확인"/>
+        <!--box *-->
+        <EditText
+            android:id="@+id/PWCHK"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <!--GENDER-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="성별"/>
+
+        <!--radio-->
+        <RadioGroup
+            android:id="@+id/GENDER"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:width="100dp"
+                android:layout_height="match_parent"
+                android:text="남자"/>
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:width="100dp"
+                android:layout_height="match_parent"
+                android:text="여자"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!--PHONE-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="핸드폰"/>
+
+        <EditText
+            android:id="@+id/PHONE"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!--EMAIL-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="이메일"/>
+
+        <EditText
+            android:id="@+id/EMAIL"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!--SCHOOL-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:text="학교"/>
+
+        <EditText
+            android:id="@+id/SCHOOL"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!--Lincense1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/LICENSECHK1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서비스 이용약관에 동의합니다."/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"/>
+    </LinearLayout>
+
+    <!--Lincense2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/LICENSECHK2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인정보 및 취급방침 및 수집이용에 동의합니다."/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"/>
+    </LinearLayout>
+
+    <!--Lincense3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/LICENSECHK3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위치정보 이용약관에 동의합니다."/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"/>
+    </LinearLayout>
+
+</LinearLayout>
