@@ -12,7 +12,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="right"
-        android:text="로그인" />
+        android:text="로그인"
+        android:textSize="25dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -26,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_gravity="center">
@@ -35,19 +36,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="치킨"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "피자"
-        android:textSize = "20dp"/>
+        android:textSize = "30dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text = "피자"
-            android:textSize = "20dp"/>
+            android:textSize = "30dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -58,20 +59,33 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="치킨"
-            android:textSize="20dp" />
+            android:text="한식"
+            android:textSize="30dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "피자"
-            android:textSize = "20dp"/>
+            android:text = "중식"
+            android:textSize = "30dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="피자"
-            android:textSize="20dp"/>
+            android:text="일식"
+            android:textSize="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="평점"
+            android:textSize="35dp" />
+
     </LinearLayout>
 
 </LinearLayout>
