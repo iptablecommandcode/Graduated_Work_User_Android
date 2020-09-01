@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:ignore="MissingConstraints">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="본 정책은 [주]인포렉스(이하 '회사'라합니다)에서 운영하는 클럽5678(www.club5678.com)과 클럽5678, 클럽라이브, 빠른톡, 빠른톡S, 연인톡, 영상통통 등 관련 애플리케이션(App) 서비스에 적용되는 개인정보취급방침입니다.
+회사는 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보취급방침 규정을 준수하며, 관련 법령에 의거한 개인정보취급방침 정하여 이용자 권익 보호에 최선을 다하고 있습니다.
+1. 개인정보 취급방침에 대한 동의 회사는 회원님의 개인정보 수집에 대하여 동의를 받고 있습니다. 회원가입 절차 중 “이용약관” 및 “개인정보취급방침”을 게재하고 이용약관동의, 개인정보 수집 및 이용목적, 수집하는 개인정보의 항목, 개인정보의 보유 및 이용기간 등에 대한 동의를 하시면 개인정보취급방침에 동의한 것으로 봅니다.
+2. 개인정보의 수집 이용 목적 회원가입 및 서비스 제공을 위해 필수적인 개인정보를 수집하고 있습니다. 본인식별 및 서비스 이용에 따른 민원처리, 이벤트 제공에 따른 배송, 제휴업체에 대한 정보제공, 불법이용자 및 부정이용방지 등 원할한 서비스 제공을 위해 사용되고 있습니다. 이외에 회원에게 맞춤형 서비스 제공 및 빠른 서비스 제공을 위해 수집 이용됩니다.
+3. 수집하는 개인정보의 항목 개인정보란 생존하는 개인에 관한 정보로서 개인을 식별할 수 있는 정보(성명, 주소 등과 같이 한가지 이상의 정보가 결합하여 식별할 수 있는 것을 포함합니다)를 말합니다.
+(1) 필수항목 : 아이디, 이름, 닉네임, 생일, 이메일, 주소 및 미팅정보(직업, 신체정보, 원하는 만남/스타일, 인사말)
+(2) 선택정보 : 프로필사진정보,핸드폰정보, 은행계좌정보, 신용카드정보, 일반전화정보 등 결제기록
+(3) 이용자 정보 : 접속 IP 정보, 접속로그, 서비스 이용기록, 쿠키, OS 및 브라우저 정보 입력된 정보는 고지사항 전달 및 민원처리 등을 위한 정보로 활용할 수 있습니다. 이외에 서비스 확대 제공을 위하여 추가정보를 요구할 수 있습니다. 요구된 정보는 팝업 및 입력창으로 확인되며, 회원님이 직접 입력하는 방식입니다. 정보입력을 완료할 경우 동의한것으로 간주합니다.
+4. 개인정보의 공유 및 제공 회사는 회원님들의 개인정보를 “2. 개인정보의 수집 이용 목적”에서 고지한 범위 내에서 사용하며, 회원님의 사전 동의 없이는 범위를 초과하여 이용하거나 원칙적으로 회원님의 개인정보를 외부에 제공하지 않습니다. 다만 다음의 경우에는 제외합니다.
+(1) 법령의 규정에 의거하거나, 수사상 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우
+(2) 서비스를 이용하여 타인에게 정신적, 물질적 피해를 줌으로써 그에 대한 법적인 조치를 취하기 위하여 개인정보를 공개해야 한다고 판단되는 충분한 근거가 있는 경우
+(3) 회원님의 동의를 얻은 경우
+(4) 요금의 정산을 위해 필요한 경우
+(5) 통계작성·학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우
+(6) 사람의 생명 및 신체에 긴급한 위험이 발생한 경우로서 정보주체의 동의를 받을 수 없는 정당한 사유가 있는 경우
+5. 개인정보의 열람과 정정 회사는 회원님은 언제든지 등록되어 있는 정보를 열람, 정정을 요청하실 수 있습니다. 회원님이 직접 정보를 수정하려면, 사이트 로그인 후 내폴더>정보변경 접속해 아이디, 비번을 입력한 후 개인정보를 열람하거나 정정할 수 있으며, 개인정보관리책임자에게 전화, 이메일, 팩스로 연락하시면 필요한 조치를 취하도록 하겠습니다.
+6. 동의철회 회원가입 등을 통한 개인정보의 수집, 이용, 제공에 대해 회원님께서 동의하신 내용에 대해 회원님은 언제든지 철회하실 수 있습니다. 동의철회는 사이트 로그인 후 사이트 하단의 도우미고객센터를 클릭 개인정보>회원탈퇴 메뉴를 이용하여 탈퇴하거나 또는 내폴더>정보변경에 접속해 아이디, 비밀번호를 입력한 후 회원탈퇴 메뉴에서 탈퇴하실 수 있으며, 개인정보관리책임자에게 전화, 이메일, 팩스로 연락하시면 필요한 조치를 취하도록 하겠습니다.
+7. 개인정보의 보유기간 및 이용기간 회원님의 개인정보는 다음과 같이 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다. 단, 상법 등 관련법령의 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우에는 일정기간 보유합니다.
+(1) 계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률 근거)
+(2) 대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률 근거)
+(3) 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률 근거)
+(4) 이용자정보(서비스이용기록, 접속로그, 접속IP정보) 기록 : 3개월(부정/불법 이용관련 수사기관 협조 근거)"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:focusable="false" />
+    </ScrollView>
+    </LinearLayout>
+    <Button
+        android:layout_width="148dp"
+        android:layout_height="81dp"
+        android:text="확인"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="472dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
