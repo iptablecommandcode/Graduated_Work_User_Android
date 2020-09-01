@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
         <TextView
             android:id="@+id/matchtext1"
@@ -25,9 +19,5 @@
             android:layout_gravity="center"
             android:layout_margin="150dp"
             android:text="매칭 취소" />
-
-    </LinearLayout>
-
-
 
 </LinearLayout>
