@@ -233,6 +233,8 @@
     </LinearLayout>
 
     <!--Lincense2-->
+
+    <!--Lincense3-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -240,20 +242,19 @@
         <CheckBox
             android:id="@+id/LICENSECHK2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="개인정보 및 취급방침 및 수집이용에 동의합니다."/>
+            android:text="개인정보 및 취급방침 및 수집이용에 동의합니다." />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="전문보기"/>
+            android:text="전문보기" />
     </LinearLayout>
 
-    <!--Lincense3-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

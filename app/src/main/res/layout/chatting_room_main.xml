@@ -4,6 +4,21 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상대 닉네임" />
+    <Button
+        android:text="뒤로가기"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/im1"
         android:layout_width="fill_parent"
@@ -53,4 +68,5 @@
             android:text="전 송" />
 
     </LinearLayout>
+
 </LinearLayout>
