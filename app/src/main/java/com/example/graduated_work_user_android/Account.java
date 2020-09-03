@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import android.app.Activity;
@@ -15,11 +16,12 @@ public class Account extends Activity {
     EditText ID, NAME, PW, PWCHK, PHONE, EMAIL, SCHOOL, NULL;
     CheckBox LICENSECHK1, LICENSECHK2, LICENSECHK3;
     Button LICENSE1, LICENSE2, LICENSE3, BACK, SAVE;
+    RadioGroup GENDER;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.account);
 
         //value input
         //Text
@@ -38,6 +40,9 @@ public class Account extends Activity {
         LICENSE1 = (Button) findViewById(R.id.LICENSE1);
         LICENSE2 = (Button) findViewById(R.id.LICENSE2);
         LICENSE3 = (Button) findViewById(R.id.LICENSE3);
+
+        //RadioGroup
+        GENDER = (RadioGroup) findViewById(R.id.GENDER);
 
         //save
         SAVE.setOnClickListener(new View.OnClickListener(){
