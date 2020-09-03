@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         tools:ignore="MissingConstraints">
@@ -70,13 +71,16 @@
     </LinearLayout>
     <Button
         android:id="@+id/btnNewActivity"
-        android:layout_width="148dp"
-        android:layout_height="81dp"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="428dp"
+        android:gravity="center"
         android:text="확인"
-        android:textSize="25dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="472dp" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="InvalidId,MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
