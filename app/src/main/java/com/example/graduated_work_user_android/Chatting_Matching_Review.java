@@ -3,9 +3,9 @@ package com.example.graduated_work_user_android;
 import android.os.Bundle;
 import android.widget.RatingBar;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
-public class Chatting_Matching_Review extends AppCompatActivity {
+public class Chatting_Matching_Review extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

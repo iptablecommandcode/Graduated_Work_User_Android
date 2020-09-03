@@ -1,5 +1,6 @@
 package com.example.graduated_work_user_android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,9 +8,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
-public class Account extends AppCompatActivity {
+public class Account extends Activity {
 
     EditText ID, NAME, PW, PWCHK, PHONE, EMAIL, SCHOOL, NULL;
     CheckBox LICENSECHK1, LICENSECHK2, LICENSECHK3;
@@ -58,6 +59,14 @@ public class Account extends AppCompatActivity {
                 }else if(check==3){
                     PasMsg.show();
                 }
+            }
+        });
+
+        //Back_Main_Page
+        BACK.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
