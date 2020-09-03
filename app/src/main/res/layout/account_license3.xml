@@ -69,6 +69,7 @@
     </ScrollView>
     </LinearLayout>
     <Button
+        android:id="@+id/btnNewActivity"
         android:layout_width="148dp"
         android:layout_height="81dp"
         android:text="확인"

@@ -45,13 +45,14 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnNewActivity"
         android:layout_width="148dp"
         android:layout_height="81dp"
         android:text="확인"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
+        tools:ignore="InvalidId,MissingConstraints"
         tools:layout_editor_absoluteY="472dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
