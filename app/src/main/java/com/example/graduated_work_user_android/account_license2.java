@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class account_license2 extends Activity {
+public class Account_License2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

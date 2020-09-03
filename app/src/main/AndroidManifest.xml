@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Account"/>
+        <activity android:name=".Account_License"/>
+        <activity android:name=".Account_License2"/>
+        <activity android:name=".Account_License3"/>
     </application>
 
 </manifest>
