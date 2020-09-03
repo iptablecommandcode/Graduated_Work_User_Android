@@ -32,10 +32,10 @@
             android:gravity="right">
 
             <Button
-                android:id="@+id/SAVE"
+                android:id="@+id/Sign_In"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="저장"/>
+                android:text="Sign_In"/>
 
         </LinearLayout>
 
@@ -168,7 +168,8 @@
                 android:layout_width="wrap_content"
                 android:width="100dp"
                 android:layout_height="match_parent"
-                android:text="남자"/>
+                android:text="남자"
+                android:checked="true"/>
             <RadioButton
                 android:id="@+id/radio2"
                 android:layout_width="wrap_content"

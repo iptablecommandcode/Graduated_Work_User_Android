@@ -1,11 +1,15 @@
 package com.example.graduated_work_user_android;
 
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class AccountCheck {
-    private String ID, NAME, PW, PWCHK, PHONE, EMAIL, SCHOOL, NULL;
+    private String ID, NAME, PW, PWCHK, PHONE, EMAIL, SCHOOL, NULL, SEX;
+    CheckBox LICENSECHK1, LICENSECHK2, LICENSECHK3;
 
-    AccountCheck(EditText ID, EditText NAME, EditText PW, EditText PWCHK, EditText PHONE, EditText EMAIL, EditText SCHOOL, EditText NULL){
+    AccountCheck(EditText ID, EditText NAME, EditText PW, EditText PWCHK, EditText PHONE, EditText EMAIL, EditText SCHOOL, EditText NULL, RadioButton SEX, CheckBox LICENSECHK1, CheckBox LICENSECHK2, CheckBox LICENSECHK3){
+        //clear and setting
         this.ID = ID.getText().toString();
         this.NAME = NAME.getText().toString();
         this.PW = PW.getText().toString();
@@ -14,6 +18,11 @@ public class AccountCheck {
         this.EMAIL = EMAIL.getText().toString();
         this.SCHOOL = SCHOOL.getText().toString();
         this.NULL = NULL.getText().toString();
+        this.SEX = SEX.getText().toString();
+        this.LICENSECHK1 = LICENSECHK1;
+        this.LICENSECHK2 = LICENSECHK2;
+        this.LICENSECHK3 = LICENSECHK3;
+
     }
 
     //account data check
@@ -23,8 +32,10 @@ public class AccountCheck {
     public int TotalCheck(){
         if (EmptyChk() == false)
             return 2;
-        if(PasswordCheck() == false)
+        if(PasswordChk() == false)
             return 3;
+        if(LicenseChK() == false)
+            return 4;
         return 1;
     }
 
@@ -47,9 +58,20 @@ public class AccountCheck {
         return true;
     }
 
-    boolean PasswordCheck(){
+    boolean PasswordChk(){
         if (PW.equals(PWCHK))
             return true;
         return false;
     }
+
+    boolean LicenseChK(){
+        if(LICENSECHK1.isChecked()){
+            if (LICENSECHK2.isChecked()){
+                if (LICENSECHK3.isChecked())
+                    return true;
+            }
+        }
+        return false;
+    }
+
 }
