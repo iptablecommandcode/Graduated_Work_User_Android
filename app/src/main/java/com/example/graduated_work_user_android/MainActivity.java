@@ -25,5 +25,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        DB_Conn db = new DB_Conn();
+        db.DBConn();
     }
 }
