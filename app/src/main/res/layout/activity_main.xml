@@ -34,18 +34,21 @@
         android:layout_gravity="center">
 
     <Button
+        android:id="@+id/chicken"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:text="치킨"
         android:textSize="30dp" />
 
     <Button
+        android:id="@+id/pizza"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:text = "피자"
         android:textSize = "30dp"/>
 
         <Button
+            android:id="@+id/pasta"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text = "파스타"
@@ -58,34 +61,40 @@
         android:layout_gravity="center">
 
         <Button
+            android:id="@+id/koreanfood"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text="한식"
             android:textSize="30dp" />
 
         <Button
+            android:id="@+id/chinesefood"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text = "중식"
             android:textSize = "30dp"/>
 
         <Button
+            android:id="@+id/japanesfood"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text="일식"
             android:textSize="30dp"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/Review"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
             android:text="평점"
-            android:textSize="35dp" />
+            android:textSize="30dp" />
+
 
     </LinearLayout>
 
