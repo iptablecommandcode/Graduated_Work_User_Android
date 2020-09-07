@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="상대 닉네임" />
     <Button
+        android:id="@+id/backspace"
         android:text="뒤로가기"
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
