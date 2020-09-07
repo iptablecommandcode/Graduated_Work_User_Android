@@ -18,7 +18,7 @@ public class Chatting_room_main extends Activity {
 
         backspace = findViewById(R.id.backspace);
 
-        backspace.setOnClickListener(new View.OnClickListener(){
+        backspace.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
