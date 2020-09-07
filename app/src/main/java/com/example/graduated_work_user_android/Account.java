@@ -19,6 +19,12 @@ public class Account extends Activity {
     Button LICENSE1, LICENSE2, LICENSE3, BACK, Sign_In;
     RadioGroup GENDER;
 
+    //disable android back button
+    @Override
+    public void onBackPressed() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
