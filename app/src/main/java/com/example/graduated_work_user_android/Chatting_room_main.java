@@ -30,18 +30,6 @@ public class Chatting_room_main extends Activity {
                 Intent intent = new Intent(Chatting_room_main.this, Chatting_Matching_Review.class);
                 startActivity(intent);
             }
-
-                @Override
-
-            //형식만 짜둠 수정해야됨
-            public boolean onCreateOptionsMenu(Menu menu) {
-
-                getMenuInflater().inflate(R.menu.chatting_room_adapter, menu);
-
-                chatlist = new Chatting_room_adapter(this.getApplicationContext(),R.layout.chatting_room_main);
-                final ListView listView = findViewById(R.id.chatlist);
-                listView.setAdapter();
-            }
         });
     }
 }
