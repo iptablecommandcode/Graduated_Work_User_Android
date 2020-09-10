@@ -50,6 +50,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/btn2"
         android:layout_width="105dp"
         android:layout_height="50dp"
         android:text="로그인"
