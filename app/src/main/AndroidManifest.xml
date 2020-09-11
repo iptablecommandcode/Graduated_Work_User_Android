@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,6 +21,7 @@
         <activity android:name=".Account_License"/>
         <activity android:name=".Account_License2"/>
         <activity android:name=".Account_License3"/>
+        <activity android:name=".LogInPage"/>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

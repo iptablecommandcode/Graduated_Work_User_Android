@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 
         Sign_In.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(), Account.class);
+                Intent intent = new Intent(getApplicationContext(), LogInPage.class);
                 startActivity(intent);
             }
         });
@@ -99,8 +99,5 @@ public class MainActivity extends Activity {
 
 
 
-
-        DB_Conn db = new DB_Conn();
-        db.DBConn();
     }
 }
