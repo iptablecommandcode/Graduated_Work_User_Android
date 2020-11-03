@@ -7,11 +7,12 @@ import java.util.HashMap;
 
 public class NetworkTask extends AsyncTask<Void, Void, String> {
 
-    private static String url="http://192.168.117.201:8080/AndroidSign_In";
+    String url = null;
     private ContentValues values;
     HashMap<String, String> map;
 
-    public NetworkTask(ContentValues values) {
+    public NetworkTask(String url,ContentValues values) {
+        this.url = url;
         this.values = values;
     }
 

@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.example.graduated_work_user_android.Spring_Connection.NetworkTask;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,6 +20,9 @@ public class LogInPage extends Activity {
 
     EditText ID,PW;
     Button btn1,btn2;
+
+    //DB접속 주소
+    String url = "http://192.168.117.201:8080/AndroidSign_In";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +74,7 @@ public class LogInPage extends Activity {
         return true;
     }
 
-    //DB에서 json으로 값 가져와 String으로 넣기
+    //DB값 전송후 처리된 json값 가져와 String결과값 반환
     private String usedatabase(String id, String pw){
         String Signcheck = null;
 
@@ -81,7 +83,7 @@ public class LogInPage extends Activity {
         contentValues.put("id",id);
         contentValues.put("pw",pw);
 
-        NetworkTask networkTask = new NetworkTask(contentValues);
+        NetworkTask networkTask = new NetworkTask(url,contentValues);
         //값 처리
         try {
             Signcheck = networkTask.execute().get();

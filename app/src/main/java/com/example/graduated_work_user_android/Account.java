@@ -1,5 +1,6 @@
 package com.example.graduated_work_user_android;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,13 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import android.app.Activity;
+
+import com.example.graduated_work_user_android.Spring_Connection.NetworkTask;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
 
 public class Account extends Activity {
 
@@ -78,8 +86,9 @@ public class Account extends Activity {
                 //select message
                 if(check==1){
                     //save
-                    CorrMsg.show();
-                    
+                    Sign_Up();
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                 }else if(check==2){
                     EmpMsg.show();
                 }else if(check==3){
@@ -122,5 +131,50 @@ public class Account extends Activity {
             }
         });
 
+    }
+
+    //DB값 전송후 처리된 json값 가져와 String결과값 반환
+    private void Sign_Up(){
+        //DB접속 주소
+        String url = "http://192.168.117.201:8080/Account/Sign_Up";
+        //결과값 확인용도 추후 삭제 예정
+        String Signcheck = null;
+
+        //요청 값 ContentValues로 보내기
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ID",NAME.getText().toString());
+        contentValues.put("NAME",NAME.getText().toString());
+        contentValues.put("PASSWORD",NAME.getText().toString());
+        contentValues.put("GENDER",NAME.getText().toString());
+        contentValues.put("PHONE",NAME.getText().toString());
+        contentValues.put("EMAIL",NAME.getText().toString());
+        contentValues.put("SCHOOL",NAME.getText().toString());
+        contentValues.put("ADMIN",2);
+
+        NetworkTask networkTask = new NetworkTask(url,contentValues);
+        //값 처리
+        try {
+            Signcheck = networkTask.execute().get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //결과 값 가져오기 Spring collection에서 json값 확인
+        //결과값 확인용도 추후 삭제 예정
+        System.out.println("결과값"+Signcheck);
+    }
+
+    //String에 넣은 json값 꺼내기
+    private String changeString(String Signcheck){
+        String reString = null;
+        try {
+            //json에서 키값 지정해 불러오기
+            reString = (String) new JSONObject(Signcheck).get("Sign_In");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return reString;
     }
 }
