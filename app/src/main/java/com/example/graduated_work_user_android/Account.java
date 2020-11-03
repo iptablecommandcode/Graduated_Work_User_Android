@@ -79,6 +79,7 @@ public class Account extends Activity {
                 if(check==1){
                     //save
                     CorrMsg.show();
+                    
                 }else if(check==2){
                     EmpMsg.show();
                 }else if(check==3){

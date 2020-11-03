@@ -1,6 +1,7 @@
 package com.example.graduated_work_user_android;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,11 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.graduated_work_user_android.Spring_Connection.HTTPClient;
-import com.example.graduated_work_user_android.Spring_Connection.Tesk;
+import com.example.graduated_work_user_android.Spring_Connection.NetworkTask;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
 
 public class LogInPage extends Activity {
 
@@ -46,8 +49,6 @@ public class LogInPage extends Activity {
         });
     }
 
-
-
     private void loginValidation(String id, String pw) {
         if((id != "") && (pw != "")) {
             // login action
@@ -66,45 +67,45 @@ public class LogInPage extends Activity {
         }
     }
 
-    private boolean check(String id, String pw){
-        //Tesk networkTask = new Tesk();
+    public boolean check(String id, String pw){
 
-        Map<String, String> params = new HashMap<String, String>();
-        params.put("id", id);
-        params.put("pw", pw);
-        //객체 호출 안되서 직접 아래 메소드 제작
-        if(network(params)){
-            return true;
-        }else{
-            return false;
-        }
-        //networkTask.execute(params);
+        return true;
     }
 
-    private boolean network(Map<String, String>... param){
-        String ip = "192.168.117.201";
+    //DB에서 json으로 값 가져와 String으로 넣기
+    private String usedatabase(String id, String pw){
+        String Signcheck = null;
 
-        HTTPClient.Builder http = new HTTPClient.Builder
-                ("POST", "http://" + ip + ":8080/Android"); //address
+        //요청 값 ContentValues로 보내기
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("id",id);
+        contentValues.put("pw",pw);
 
-        // Parameter 를 전송한다.
-        http.addAllParameters(param[0]);
-
-        //Http 요청 전송
-        HTTPClient post = http.create();
-        post.request();
-
-        // 응답 상태코드 가져오기
-        int statusCode = post.getHttpStatusCode();
-
-        // 응답 본문 가져오기
-        String body = post.getBody();
-
-        if(body.equals("true")){
-            return true;
-        }else{
-            return false;
+        NetworkTask networkTask = new NetworkTask(contentValues);
+        //값 처리
+        try {
+            Signcheck = networkTask.execute().get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+        //결과 값 가져오기 Spring collection에서 json값 확인
+        System.out.println("여기"+Signcheck);
+        return Signcheck;
+    }
+
+    //String에 넣은 json값 꺼내기
+    private String changeString(String Signcheck){
+        String reString = null;
+        try {
+            //json에서 키값 지정해 불러오기
+            reString = (String) new JSONObject(Signcheck).get("Sign_In");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return reString;
     }
 }
 
