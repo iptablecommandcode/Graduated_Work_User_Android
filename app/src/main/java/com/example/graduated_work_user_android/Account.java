@@ -66,7 +66,7 @@ public class Account extends Activity {
         LICENSECHK2 = (CheckBox) findViewById(R.id.LICENSECHK2);
         LICENSECHK3 = (CheckBox) findViewById(R.id.LICENSECHK3);
 
-        //save
+        //Sign_Up
         Sign_In.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Toast EmpMsg = Toast.makeText(getApplicationContext(), "값을 입력하십시오", Toast.LENGTH_SHORT);

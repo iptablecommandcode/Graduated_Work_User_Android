@@ -55,6 +55,7 @@ public class LogInPage extends Activity {
         if((id != "") && (pw != "")) {
             // login action
             if(check(id,pw) == true) {
+                usedatabase(id,pw);
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }else{
@@ -69,9 +70,12 @@ public class LogInPage extends Activity {
         }
     }
 
+    //로그인 확인
     public boolean check(String id, String pw){
-
-        return true;
+        if(usedatabase(id,pw).equals("true"))
+            return true;
+        else
+            return false;
     }
 
     //DB값 전송후 처리된 json값 가져와 String결과값 반환
@@ -93,9 +97,8 @@ public class LogInPage extends Activity {
             e.printStackTrace();
         }
 
-        //결과 값 가져오기 Spring collection에서 json값 확인
-        System.out.println("여기"+Signcheck);
-        return Signcheck;
+        //결과 값 가져오기 Spring collection에서 json값 확인후 json에서 결과값 가져오기
+        return changeString(Signcheck);
     }
 
     //String에 넣은 json값 꺼내기
