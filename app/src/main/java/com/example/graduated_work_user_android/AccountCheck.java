@@ -7,8 +7,9 @@ import android.widget.RadioButton;
 public class AccountCheck {
     private String ID, NAME, PW, PWCHK, PHONE, EMAIL, SCHOOL, NULL, SEX;
     CheckBox LICENSECHK1, LICENSECHK2, LICENSECHK3;
+    boolean IDCHK;
 
-    AccountCheck(EditText ID, EditText NAME, EditText PW, EditText PWCHK, EditText PHONE, EditText EMAIL, EditText SCHOOL, EditText NULL, RadioButton SEX, CheckBox LICENSECHK1, CheckBox LICENSECHK2, CheckBox LICENSECHK3){
+    AccountCheck(EditText ID, EditText NAME, EditText PW, EditText PWCHK, EditText PHONE, EditText EMAIL, EditText SCHOOL, EditText NULL, RadioButton SEX, CheckBox LICENSECHK1, CheckBox LICENSECHK2, CheckBox LICENSECHK3, boolean IDCHK){
         //clear and setting
         this.ID = ID.getText().toString();
         this.NAME = NAME.getText().toString();
@@ -22,7 +23,7 @@ public class AccountCheck {
         this.LICENSECHK1 = LICENSECHK1;
         this.LICENSECHK2 = LICENSECHK2;
         this.LICENSECHK3 = LICENSECHK3;
-
+        this.IDCHK = IDCHK;
     }
 
     //account data check
@@ -36,6 +37,8 @@ public class AccountCheck {
             return 3;
         if(LicenseChK() == false)
             return 4;
+        if(IDCHK == false)
+            return 5;
         return 1;
     }
 
@@ -65,13 +68,10 @@ public class AccountCheck {
     }
 
     boolean LicenseChK(){
-        if(LICENSECHK1.isChecked()){
-            if (LICENSECHK2.isChecked()){
+        if(LICENSECHK1.isChecked())
+            if (LICENSECHK2.isChecked())
                 if (LICENSECHK3.isChecked())
                     return true;
-            }
-        }
         return false;
     }
-
 }

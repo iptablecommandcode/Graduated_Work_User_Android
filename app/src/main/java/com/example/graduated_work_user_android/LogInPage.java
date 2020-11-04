@@ -12,9 +12,6 @@ import android.widget.Toast;
 import com.example.graduated_work_user_android.Spring_Connection.JsonToString;
 import com.example.graduated_work_user_android.Spring_Connection.NetworkTask;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.concurrent.ExecutionException;
 
 public class LogInPage extends Activity {
@@ -53,20 +50,20 @@ public class LogInPage extends Activity {
     }
 
     private void loginValidation(String id, String pw) {
-        if((id != "") && (pw != "")) {
-            // login action
-            if(check(id,pw) == true) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }else{
-                Toast.makeText(LogInPage.this, "아이디와 비밀번호가 일치하지 않습니다.", Toast.LENGTH_LONG).show();
-            }
+        if((id.equals("")) && (pw.equals(""))) {
+            //id,pw null
+            Toast.makeText(LogInPage.this, "아이디와 비밀번호를 입력하시오", Toast.LENGTH_LONG).show();
         } else if ((id != "") && (pw == "")){
             // sign in first
             Toast.makeText(LogInPage.this, "비밀번호를 입력하시오", Toast.LENGTH_LONG).show();
-        } else {
-            // login faile;
-            Toast.makeText(LogInPage.this, "로그인 실패", Toast.LENGTH_LONG).show();
+        } else if ((id != "") && (pw != "")) {
+            // login action
+            if (check(id, pw) == true) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(LogInPage.this, "아이디와 비밀번호가 일치하지 않습니다.", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
