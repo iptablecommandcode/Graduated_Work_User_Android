@@ -13,10 +13,8 @@ import android.widget.Toast;
 
 import android.app.Activity;
 
+import com.example.graduated_work_user_android.Spring_Connection.JsonToString;
 import com.example.graduated_work_user_android.Spring_Connection.NetworkTask;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
 
@@ -137,8 +135,6 @@ public class Account extends Activity {
     private void Sign_Up(){
         //DB접속 주소
         String url = "http://192.168.117.201:8080/Account/Sign_Up";
-        //결과값 확인용도 추후 삭제 예정
-        String Signcheck = null;
 
         //요청 값 ContentValues로 보내기
         ContentValues contentValues = new ContentValues();
@@ -149,7 +145,31 @@ public class Account extends Activity {
         contentValues.put("PHONE",NAME.getText().toString());
         contentValues.put("EMAIL",NAME.getText().toString());
         contentValues.put("SCHOOL",NAME.getText().toString());
-        contentValues.put("ADMIN",2);
+
+        NetworkTask networkTask = new NetworkTask(url,contentValues);
+        //값 처리
+        try {
+            networkTask.execute().get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //결과 값 가져오기 Spring collection에서 json값 확인
+    }
+
+    //DB값 전송후 처리된 json값 가져와 String결과값 반환
+    private boolean Id_Check(){
+        //DB접속 주소
+        String url = "http://192.168.117.201:8080/Account/Search_ID";
+
+        //결과값 json 받기용
+        String Signcheck = null;
+
+        //요청 값 ContentValues로 보내기
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ID",NAME.getText().toString());
 
         NetworkTask networkTask = new NetworkTask(url,contentValues);
         //값 처리
@@ -160,21 +180,10 @@ public class Account extends Activity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        //json값 String으로 추출
+        JsonToString jsonToString = new JsonToString(Signcheck);
 
-        //결과 값 가져오기 Spring collection에서 json값 확인
-        //결과값 확인용도 추후 삭제 예정
-        System.out.println("결과값"+Signcheck);
+        return jsonToString.changeTrueFalse();
     }
 
-    //String에 넣은 json값 꺼내기
-    private String changeString(String Signcheck){
-        String reString = null;
-        try {
-            //json에서 키값 지정해 불러오기
-            reString = (String) new JSONObject(Signcheck).get("Sign_In");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return reString;
-    }
 }

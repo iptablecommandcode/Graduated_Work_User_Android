@@ -1,6 +1,6 @@
 package com.example.graduated_work_user_android;
 
-        import android.app.Activity;
+import android.app.Activity;
         import android.content.Intent;
         import android.os.Bundle;
         import android.view.View;
@@ -28,9 +28,6 @@ public class Chatting_room_main extends Activity {
 
                 Intent intent = new Intent(Chatting_room_main.this, Chatting_Matching_Review.class);
                 startActivity(intent);
-
-
-
             }
         });
     }

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.graduated_work_user_android.Spring_Connection.JsonToString;
 import com.example.graduated_work_user_android.Spring_Connection.NetworkTask;
 
 import org.json.JSONException;
@@ -55,7 +56,6 @@ public class LogInPage extends Activity {
         if((id != "") && (pw != "")) {
             // login action
             if(check(id,pw) == true) {
-                usedatabase(id,pw);
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }else{
@@ -72,14 +72,14 @@ public class LogInPage extends Activity {
 
     //로그인 확인
     public boolean check(String id, String pw){
-        if(usedatabase(id,pw).equals("true"))
+        if(usedatabase(id,pw))
             return true;
         else
             return false;
     }
 
     //DB값 전송후 처리된 json값 가져와 String결과값 반환
-    private String usedatabase(String id, String pw){
+    private boolean usedatabase(String id, String pw){
         String Signcheck = null;
 
         //요청 값 ContentValues로 보내기
@@ -90,6 +90,7 @@ public class LogInPage extends Activity {
         NetworkTask networkTask = new NetworkTask(url,contentValues);
         //값 처리
         try {
+            //결과 값 가져오기 Spring collection에서 json값 가져오기
             Signcheck = networkTask.execute().get();
         } catch (ExecutionException e) {
             e.printStackTrace();
@@ -97,20 +98,10 @@ public class LogInPage extends Activity {
             e.printStackTrace();
         }
 
-        //결과 값 가져오기 Spring collection에서 json값 확인후 json에서 결과값 가져오기
-        return changeString(Signcheck);
-    }
+        //json값에서 String으로 변환하기
+        JsonToString jsonToString = new JsonToString(Signcheck);
 
-    //String에 넣은 json값 꺼내기
-    private String changeString(String Signcheck){
-        String reString = null;
-        try {
-            //json에서 키값 지정해 불러오기
-            reString = (String) new JSONObject(Signcheck).get("Sign_In");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return reString;
+        return jsonToString.changeTrueFalse();
     }
 }
 
