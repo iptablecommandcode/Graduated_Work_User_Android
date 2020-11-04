@@ -24,9 +24,9 @@ public class Account extends Activity {
     CheckBox LICENSECHK1, LICENSECHK2, LICENSECHK3;
     Button LICENSE1, LICENSE2, LICENSE3, BACK, Sign_In, IdChk;
     RadioGroup GENDER;
+    RadioButton SEX;
 
     boolean idChk=false;
-    String CheckGender;
 
     //disable android back button
     @Override
@@ -60,14 +60,23 @@ public class Account extends Activity {
 
         //RadioGroup
         GENDER = (RadioGroup) findViewById(R.id.GENDER);
-        int gender = GENDER.getCheckedRadioButtonId();
-        final RadioButton SEX = (RadioButton) findViewById(gender);
-        CheckGender = SEX.getText().toString();
+
 
         //Check Box
         LICENSECHK1 = (CheckBox) findViewById(R.id.LICENSECHK1);
         LICENSECHK2 = (CheckBox) findViewById(R.id.LICENSECHK2);
         LICENSECHK3 = (CheckBox) findViewById(R.id.LICENSECHK3);
+
+        GENDER.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.radio1){
+                    SEX = (RadioButton) findViewById(R.id.radio1);
+                }else{
+                    SEX = (RadioButton) findViewById(R.id.radio2);
+                }
+            }
+        });
 
         //Back_Main_Page
         IdChk.setOnClickListener(new View.OnClickListener(){
@@ -165,7 +174,7 @@ public class Account extends Activity {
         contentValues.put("ID",ID.getText().toString());
         contentValues.put("NAME",NAME.getText().toString());
         contentValues.put("PASSWORD",PW.getText().toString());
-        contentValues.put("GENDER",CheckGender);
+        contentValues.put("GENDER",SEX.getText().toString());
         contentValues.put("PHONE",PHONE.getText().toString());
         contentValues.put("EMAIL",EMAIL.getText().toString());
         contentValues.put("SCHOOL",SCHOOL.getText().toString());
