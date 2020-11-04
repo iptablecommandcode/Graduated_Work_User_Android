@@ -166,9 +166,9 @@ public class Account extends Activity {
         contentValues.put("NAME",NAME.getText().toString());
         contentValues.put("PASSWORD",PW.getText().toString());
         contentValues.put("GENDER",CheckGender);
-        contentValues.put("PHONE",NAME.getText().toString());
-        contentValues.put("EMAIL",NAME.getText().toString());
-        contentValues.put("SCHOOL",NAME.getText().toString());
+        contentValues.put("PHONE",PHONE.getText().toString());
+        contentValues.put("EMAIL",EMAIL.getText().toString());
+        contentValues.put("SCHOOL",SCHOOL.getText().toString());
 
         NetworkTask networkTask = new NetworkTask(url,contentValues);
         //값 처리
