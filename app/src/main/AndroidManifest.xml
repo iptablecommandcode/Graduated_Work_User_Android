@@ -22,6 +22,10 @@
         <activity android:name=".Account_License2"/>
         <activity android:name=".Account_License3"/>
         <activity android:name=".LogInPage"/>
+        <activity android:name=".Chatting_room_main"/>
+        <activity android:name=".Chatting_Loading"/>
+        <activity android:name=".Chatting_Matching_Review"/>
+        <activity android:name=".Main_SignIn"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

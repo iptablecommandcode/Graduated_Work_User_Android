@@ -60,6 +60,7 @@ public class Account extends Activity {
 
         //RadioGroup
         GENDER = (RadioGroup) findViewById(R.id.GENDER);
+        SEX = (RadioButton) findViewById(R.id.radio1);
 
 
         //Check Box
@@ -116,7 +117,7 @@ public class Account extends Activity {
                 if(check==1){
                     //save
                     Sign_Up();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), LogInPage.class);
                     startActivity(intent);
                 }else if(check==2){
                     EmpMsg.show();
@@ -133,7 +134,7 @@ public class Account extends Activity {
         //Back_Main_Page
         BACK.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LogInPage.class);
                 startActivity(intent);
             }
         });
@@ -167,7 +168,7 @@ public class Account extends Activity {
     //DB값 전송후 처리된 json값 가져와 String결과값 반환
     private void Sign_Up(){
         //DB접속 주소
-        String url = "http://192.168.117.201:8080/Account/Sign_Up";
+        final String url = "http://192.168.117.201:8080/Account/Sign_Up";
 
         //요청 값 ContentValues로 보내기
         ContentValues contentValues = new ContentValues();
@@ -217,7 +218,7 @@ public class Account extends Activity {
             e.printStackTrace();
         }
         //json값 String으로 추출
-        JsonToString jsonToString = new JsonToString(Signcheck);
+        JsonToString jsonToString = new JsonToString(Signcheck,"Search");
 
         return jsonToString.changeTrueFalse();
     }

@@ -12,8 +12,13 @@ public class Chatting_room_main extends Activity {
     Button backspace;
     ListView chatlist;
 
+    //disable android back button
     @Override
+    public void onBackPressed() {
 
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chatting_room_main);

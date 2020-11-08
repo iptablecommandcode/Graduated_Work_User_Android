@@ -10,6 +10,12 @@ import android.widget.Button;
 
 public class Account_License3 extends Activity {
 
+    //disable android back button
+    @Override
+    public void onBackPressed() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -3,13 +3,10 @@ package com.example.graduated_work_user_android.Spring_Connection;
 import android.content.ContentValues;
 import android.os.AsyncTask;
 
-import java.util.HashMap;
-
 public class NetworkTask extends AsyncTask<Void, Void, String> {
 
-    String url = null;
+    String url;
     private ContentValues values;
-    HashMap<String, String> map;
 
     public NetworkTask(String url,ContentValues values) {
         this.url = url;

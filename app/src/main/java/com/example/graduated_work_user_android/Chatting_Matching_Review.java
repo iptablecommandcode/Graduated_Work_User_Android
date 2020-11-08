@@ -10,6 +10,12 @@ import android.app.Activity;
 
 public class Chatting_Matching_Review extends Activity {
 
+    //disable android back button
+    @Override
+    public void onBackPressed() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

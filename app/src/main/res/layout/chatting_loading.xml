@@ -10,9 +10,11 @@
             android:text="상대를 찾는중"
             android:gravity="center"
             android:textSize="50dp"/>
+
         <ImageView
+            android:id="@+id/Loading"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_marginTop="80dp"
             android:src="@drawable/loading" />
 
@@ -21,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="150dp"
+            android:layout_margin="100dp"
             android:text="매칭 취소" />
 
 </LinearLayout>

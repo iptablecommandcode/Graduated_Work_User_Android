@@ -18,9 +18,16 @@ public class LogInPage extends Activity {
 
     EditText ID,PW;
     Button btn1,btn2;
+    String UserID, UserPW;
 
     //DB접속 주소
     String url = "http://192.168.117.201:8080/AndroidSign_In";
+
+    //disable android back button
+    @Override
+    public void onBackPressed() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,7 @@ public class LogInPage extends Activity {
         PW = (EditText) findViewById(R.id.edit2);
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
+
 
         //Sign_Up
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +52,9 @@ public class LogInPage extends Activity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginValidation(ID.getText().toString(),PW.getText().toString());
+                UserID = ID.getText().toString();
+                UserPW = PW.getText().toString();
+                loginValidation(UserID,UserPW);
             }
         });
     }
@@ -59,7 +69,8 @@ public class LogInPage extends Activity {
         } else if ((id != "") && (pw != "")) {
             // login action
             if (check(id, pw) == true) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(this, Main_SignIn.class);
+                intent.putExtra("id",id);
                 startActivity(intent);
             } else {
                 Toast.makeText(LogInPage.this, "아이디와 비밀번호가 일치하지 않습니다.", Toast.LENGTH_LONG).show();
@@ -96,7 +107,7 @@ public class LogInPage extends Activity {
         }
 
         //json값에서 String으로 변환하기
-        JsonToString jsonToString = new JsonToString(Signcheck);
+        JsonToString jsonToString = new JsonToString(Signcheck,"Sign_In");
 
         return jsonToString.changeTrueFalse();
     }
