@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    Button Sign_In;
+    Button Sign_In, chicken, pizza, koreanfood, pasta, chinesefood, japanesefood, Review;
 
     //disable android back button
     @Override
@@ -25,13 +25,13 @@ public class MainActivity extends Activity {
 
         //Button
         Sign_In = (Button) findViewById(R.id.Sign_In);
-        Button chicken = (Button) findViewById(R.id.chicken);
-        Button pizza = (Button) findViewById(R.id.pizza);
-        Button pasta = (Button) findViewById(R.id.pasta);
-        Button koreanfood = (Button) findViewById(R.id.koreanfood);
-        Button chinesefood = (Button) findViewById(R.id.chinesefood);
-        Button japanesefood = (Button) findViewById(R.id.japanesefood);
-        Button Review = (Button) findViewById(R.id.Review);
+        chicken = (Button) findViewById(R.id.chicken);
+        pizza = (Button) findViewById(R.id.pizza);
+        pasta = (Button) findViewById(R.id.pasta);
+        koreanfood = (Button) findViewById(R.id.koreanfood);
+        chinesefood = (Button) findViewById(R.id.chinesefood);
+        japanesefood = (Button) findViewById(R.id.japanesefood);
+        Review = (Button) findViewById(R.id.Review);
 
         //로그인 하지 않았을때 메세지 생성
         final Toast SignMsg = Toast.makeText(getApplicationContext(), "로그인을 하십시오", Toast.LENGTH_SHORT);
@@ -88,8 +88,6 @@ public class MainActivity extends Activity {
         Review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Chatting_Matching_Review.class);
-                startActivity(intent);
             }
         });
     }

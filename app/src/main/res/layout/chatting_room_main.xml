@@ -5,71 +5,58 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="상대 닉네임" />
-    <Button
-        android:id="@+id/backspace"
-        android:text="뒤로가기"
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    </RelativeLayout>
-
     <LinearLayout
         android:id="@+id/chatmain"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
-        <FrameLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <ListView
-                android:id="@+id/chatlist"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:listSelector="#00000000"
-                android:cacheColorHint="#00000000"
-                android:divider="#000000"
-                android:stackFromBottom="true"
-                android:transcriptMode="alwaysScroll"/>
-        </FrameLayout>
-    </LinearLayout>
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#2F4F4F"
-        android:layout_below="@id/chatlist"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/chat"
-            android:layout_width="301dp"
-            android:layout_height="wrap_content"
-            android:hint="메세지를 입력하세요"
-            android:inputType="textMultiLine"
-            android:maxLines="4" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/send"
+        <!--    상대 이름 뒤로가기 -->
+        <RelativeLayout
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/OtherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상대 닉네임" />
+            <Button
+                android:id="@+id/backspace"
+                android:text="뒤로가기"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+<!--        채팅-->
+        <ListView
+            android:id="@+id/chatlist"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="전 송" />
+            android:layout_weight="1"
+            android:divider="#ffffff"/>
 
+<!--        전송-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#2F4F4F"
+            android:layout_below="@id/chatlist"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/chat"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:hint="메세지를 입력하세요"
+                android:inputType="textMultiLine"
+                android:maxLines="4" />
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전 송" />
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>
