@@ -24,4 +24,16 @@ public class JsonToString {
         else
             return false;
     }
+    public String getOtheruser(String changeValue, String Value){
+        String reString = null;
+        this.changeValue = changeValue;
+        this.getValue = Value;
+
+        try {
+            reString = (String) (String) new JSONObject(changeValue).get(getValue);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return reString;
+    }
 }

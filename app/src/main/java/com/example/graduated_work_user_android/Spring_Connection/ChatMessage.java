@@ -6,10 +6,14 @@ import java.time.LocalTime;
 public class ChatMessage {
     //채팅 내용
     //사용자 ID
-    String ID,ChatList;
-    ChatMessage(String ID,String ChatList){
+    String ID;
+    String ChatList;
+    String Time;
+
+    public ChatMessage(String ID, String ChatList, String Time){
         this.ID = ID;
         this.ChatList = ChatList;
+        this.Time = Time;
     }
 
     public String getID() {
@@ -26,5 +30,13 @@ public class ChatMessage {
 
     public void setChatList(String chatList) {
         ChatList = chatList;
+    }
+
+    public String getTime() {
+        return Time;
+    }
+
+    public void setTime(String time) {
+        Time = time;
     }
 }
