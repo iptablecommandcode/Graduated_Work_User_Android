@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#a2d4db">
 
     <Button
         android:id="@+id/Sign_Out"
@@ -15,12 +16,16 @@
         android:text="로그아웃"
         android:textSize="20dp"/>
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        android:layout_gravity="center"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:gravity="center_horizontal"
-        android:text="랜덤매칭"
+        android:text="SOS\n(혼자 밥먹는 나를 구해줘)"
         android:textSize="35dp" />
 
     <LinearLayout
@@ -35,23 +40,26 @@
         <Button
             android:id="@+id/chicken"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text="치킨"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:background="@drawable/chiken"/>
 
         <Button
             android:id="@+id/pizza"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text = "피자"
-            android:textSize = "30dp"/>
+            android:textSize = "30dp"
+            android:background="@drawable/pizza"/>
 
         <Button
             android:id="@+id/pasta"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text = "파스타"
-            android:textSize = "30dp"/>
+            android:textSize = "30dp"
+            android:background="@drawable/pasta"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -62,23 +70,26 @@
         <Button
             android:id="@+id/koreanfood"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text="한식"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:background="@drawable/korean"/>
 
         <Button
             android:id="@+id/chinesefood"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text = "중식"
-            android:textSize = "30dp"/>
+            android:textSize = "30dp"
+            android:background="@drawable/jajang"/>
 
         <Button
             android:id="@+id/japanesefood"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text="일식"
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            android:background="@drawable/sisi"/>
     </LinearLayout>
 
     <LinearLayout
@@ -107,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="30dp"
-            android:text="ID1"
+            android:text="test3"
             android:textSize="25dp" />
 
         <RatingBar
@@ -130,7 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
-            android:text="ID2"
+            android:text="test2"
             android:textSize="25dp" />
 
         <RatingBar

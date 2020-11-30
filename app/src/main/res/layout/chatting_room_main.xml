@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#a2d4db">
 
     <LinearLayout
         android:id="@+id/chatmain"
@@ -32,9 +33,9 @@
         <ListView
             android:id="@+id/chatlist"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="800dp"
             android:layout_weight="1"
-            android:divider="#ffffff"/>
+            android:divider="#ffffff" />
 
 <!--        전송-->
         <LinearLayout
@@ -42,7 +43,8 @@
             android:layout_height="wrap_content"
             android:background="#2F4F4F"
             android:layout_below="@id/chatlist"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/chat"

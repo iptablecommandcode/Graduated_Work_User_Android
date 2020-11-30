@@ -91,7 +91,7 @@ public class Chatting_room_main extends Activity {
                     e.printStackTrace();
                 }
 
-                ChatMessage othermessageItem = new ChatMessage("test4", "hi", time);
+                ChatMessage othermessageItem = new ChatMessage("test4", "ㅎㅇ", time);
                 messageItems.add(othermessageItem);
 
                 adapter.notifyDataSetChanged();
