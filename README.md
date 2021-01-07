@@ -11,14 +11,14 @@ Linux(Db Server, Web Server(API Parsing)), Window10(Develope), git, Android Stud
 
 # 안드로이드 채팅어플 (관리자 페이지와 같은 DB를 사용)
 
-실행시 로딩, 메인
+### 실행시 로딩, 메인
 ![메인 페이지](main.GIF)
 
-로그인, 계정 생성
+### 로그인, 계정 생성
 ![로그인,생성 페이지](Sign_In.GIF)
 
-로그인 화면, 채팅 매칭
+### 로그인 화면, 채팅 매칭
 ![로그인 후, 매칭 페이지](matching.GIF)
 
-채팅 창, 리뷰
+### 채팅 창, 리뷰
 ![채팅,리뷰 페이지](chatting_review.GIF)
